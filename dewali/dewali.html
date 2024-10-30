@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #ff6f00;
+        }
+        video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #ff6f00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e65a00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wishing You a Joyous Diwali!</h1>
+    <video id="diwaliVideo" controls>
+        <source src=". Video 2024-10-30 at 18.25.31_03bf7021.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>May this Diwali bring joy, prosperity, and happiness to you and your loved ones!</p>
+    <button id="playButton">Start Video</button>
+
+    <script>
+        const playButton = document.getElementById('playButton');
+        const video = document.getElementById('diwaliVideo');
+
+        playButton.addEventListener('click', () => {
+            video.style.display = 'block';
+            video.play();
+            playButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
